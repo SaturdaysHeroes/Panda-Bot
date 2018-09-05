@@ -1,6 +1,6 @@
 local discordia = require('discordia')
 local client = discordia.Client()
-local botToken = ""
+local botToken = "NDg2NTk1Nzc4NzU3MDAxMjQ4.DnBa9Q._1xUewq0hth0D-EBoblfDQnJCGc"
 
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
@@ -36,6 +36,11 @@ client:on("messageCreate", function(message)
 						inline = false
 					},
                     {
+                        name = ".discord",
+                        value = "Wysyła link zapraszający do naszego discorda",
+                        inline = false
+                    },
+                    {
                         name = ".apelacja",
                         value = "Wysyła link do strony z apelacjami",
                         inline = false
@@ -69,37 +74,65 @@ client:on("messageCreate", function(message)
     end
     
     if content == prefix.."sklep" then 
-        message:reply("Oto nasz sklep: https://sklep.rage-gangs.pl")
+        message:reply {
+            content = "Oto nasz sklep: https://sklep.rage-gangs.pl",
+            mention = author,
+        }
     end
 
     if content == prefix.."apelacja" then 
-        message:reply("Zostałeś zbanowany? Złóż apelację na https://ban.rage-gangs.pl")
+        message:reply {
+            content = "Zostałeś zbanowany? Złóż apelację na https://ban.rage-gangs.pl",
+            mention = author,
+        }
     end
 
     if content == prefix.."ip" then 
-        message:reply("Oto IP CityRP: **185.11.103.89:27085**, możesz również dołączyć kilakając w steam://connect185.11.103.89:27085 ")
+        message:reply {
+            content = "Oto IP CityRP: **185.11.103.89:27085**, możesz również dołączyć kilakając w steam://connect185.11.103.89:27085",
+            mention = author,
+        }
     end
 
     if content == prefix.."verify" then 
         if member:hasRole("479777556678311955") == true then 
-            message:reply("Użytkownik jest już zweryfikowany!") 
+            message:reply {
+                content = "Jesteś już zweryfikowany!",
+                mention = author,
+            }
         end
 
         if member:hasRole("479777556678311955") == false then 
             member:addRole("479777556678311955")
-            message:reply("Użytkownik został zweryfikowany!")
+            message:reply {
+                content = "Zostałeś zweryfikowany!",
+                mention = author,
+            }
         end
     end
 
     if content == prefix.."nsfw" then 
         if member:hasRole("481204052093435915") == true then 
-            message:reply("Użytkownik posiada już rangę NSFW") 
+            message:reply {
+                content = "Posiadasz już rangę NSFW",
+                mention = author,
+            }
         end
 
         if member:hasRole("481204052093435915") == false then 
             member:addRole("481204052093435915")
-            message:reply("Użytkownik otrzymał rangę NSFW")
+            message:reply { 
+                content = "Otrzymałeś rangę NSFW",
+                mention = author,
+            }
         end
+    end
+
+    if content == prefix.."discord" then 
+        message:reply { 
+            content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/eg52J5a",
+            mention = author,
+        }
     end
 
 end)
