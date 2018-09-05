@@ -11,10 +11,12 @@ client:on("ready", function()
 end)
 
 client:on("memberJoin", function(member)
-    member:send("test123")
+    member:send("Witaj na discordzie sieci **Rage-Gangs.pl**, napisz na dowolnym kanale komendę `.help` aby uzyskać listę moich komend. \n \nPamiętaj, aby zajrzeć na zakładkę informacje, znajdziesz tam całą listę administracji, regulaminy oraz kanał do reportowania bugów. \n\nŻyczymy miłej zabawy :)\n\n**- Zarząd sieci RGngs**")
 end)
 
 client:on("messageCreate", function(message)
+
+    if message.guild == nil then return end 
 
 	local content = message.content
 	local author = message.author
