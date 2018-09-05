@@ -1,6 +1,7 @@
 local discordia = require('discordia')
 local client = discordia.Client()
 local botToken = "NDg2NTk1Nzc4NzU3MDAxMjQ4.DnBa9Q._1xUewq0hth0D-EBoblfDQnJCGc"
+
 local prefix = "."
 local devPrefix = "*"
 
@@ -27,7 +28,9 @@ client:on("messageCreate", function(message)
     local member = message.guild.members:get(message.author.id)
     local args = content:split(" ")
 
-	if args[1] == prefix.."help" then
+	--[[ Help Commands ]]--
+
+    if args[1] == prefix.."help" then
 		message:reply {
 			embed = {
 				author = {
@@ -176,9 +179,6 @@ client:on("messageCreate", function(message)
         }
     end
 
-
-
-        
 
 end)
 
