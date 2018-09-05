@@ -10,6 +10,60 @@ client:on("ready", function()
     client:setGame(".help")
 end)
 
+client:on("memberJoin", function(member)
+    member:send(
+        {
+			embed = {
+				author = {
+					name = author.username,
+					icon_url = author.avatarURL
+				},
+				fields = { 
+					{
+						name = ".paczka",
+						value = "Wysyła link do paczki serwera CityRP",
+						inline = false
+					},
+					{
+						name = ".sklep",
+						value = "Wysyła link do naszego sklepu",
+						inline = false
+					},
+                    {
+                        name = ".discord",
+                        value = "Wysyła link zapraszający do naszego discorda",
+                        inline = false
+                    },
+                    {
+                        name = ".apelacja",
+                        value = "Wysyła link do strony z apelacjami",
+                        inline = false
+                    },
+                    {
+                        name = ".ip", 
+                        value = "Wysyła IP serwera oraz link do dołączenia",
+                        inline = false
+                    },
+                    {
+                        name = ".verify",
+                        value = "Weryfikuje autora wiadomości",
+                        inline = false
+                    },
+                    {
+                        name = ".nsfw",
+                        value = "Nadaje dostęp do kanałów NSFW",
+                        inline = false
+                    }
+				},
+				footer = {
+					text = "Stworzone przez SaturdaysHeroes#4859"
+				},
+				color = 0xFF8C00 
+			}
+		}
+    )
+end)
+
 client:on("messageCreate", function(message)
 
 	local content = message.content
