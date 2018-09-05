@@ -1,6 +1,7 @@
 local discordia = require('discordia')
 local client = discordia.Client()
 local botToken = "NDg2NTk1Nzc4NzU3MDAxMjQ4.DnBa9Q._1xUewq0hth0D-EBoblfDQnJCGc"
+local prefix = "."
 
 discordia.extensions()
 
@@ -9,7 +10,7 @@ client:on('ready', function()
 end)
 
 client:on("ready", function()
-    client:setGame(".help")
+    client:setGame(prefix.."help")
 end)
 
 client:on("memberJoin", function(member)
@@ -23,7 +24,6 @@ client:on("messageCreate", function(message)
 	local content = message.content:lower()
 	local author = message.author
     local member = message.guild.members:get(message.author.id)
-    local prefix = "."
     local args = content:split(" ")
 
 	if args[1] == prefix.."help" then
