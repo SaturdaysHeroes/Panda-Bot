@@ -20,7 +20,7 @@ client:on("messageCreate", function(message)
 
     if message.guild == nil then return end 
 
-	local content = message.content
+	local content = message.content:lower()
 	local author = message.author
     local member = message.guild.members:get(message.author.id)
     local prefix = "."
