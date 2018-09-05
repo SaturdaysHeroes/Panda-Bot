@@ -20,6 +20,7 @@ client:on("messageCreate", function(message)
 
 	local content = message.content
 	local author = message.author
+    local args = content:split(" ")
     local member = message.guild.members:get(message.author.id)
     local prefix = "."
 
@@ -75,32 +76,32 @@ client:on("messageCreate", function(message)
 		}
     end 
 
-	if content == prefix.."paczka" then 
+	if args[1] == prefix.."paczka" then 
         message:reply("Oto paczka serwera CityRP: https://steamcommunity.com/workshop/filedetails/?id=599155037")
     end
     
-    if content == prefix.."sklep" then 
+    if args[1] == prefix.."sklep" then 
         message:reply {
             content = "Oto nasz sklep: https://sklep.rage-gangs.pl",
             mention = author,
         }
     end
 
-    if content == prefix.."apelacja" then 
+    if args[1] == prefix.."apelacja" then 
         message:reply {
             content = "Zostałeś zbanowany? Złóż apelację na https://ban.rage-gangs.pl",
             mention = author,
         }
     end
 
-    if content == prefix.."ip" then 
+    if args[1] == prefix.."ip" then 
         message:reply {
             content = "Oto IP CityRP: **185.11.103.89:27085**, możesz również dołączyć kilakając w steam://connect185.11.103.89:27085",
             mention = author,
         }
     end
 
-    if content == prefix.."verify" then 
+    if args[1] == prefix.."verify" then 
         if member:hasRole("479777556678311955") == true then 
             message:reply {
                 content = "Jesteś już zweryfikowany!",
@@ -117,7 +118,7 @@ client:on("messageCreate", function(message)
         end
     end
 
-    if content == prefix.."nsfw" then 
+    if args[1] == prefix.."nsfw" then 
         if member:hasRole("481204052093435915") == true then 
             message:reply {
                 content = "Posiadasz już rangę NSFW",
@@ -134,7 +135,7 @@ client:on("messageCreate", function(message)
         end
     end
 
-    if content == prefix.."discord" then 
+    if args[1] == prefix.."discord" then 
         message:reply { 
             content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/eg52J5a",
             mention = author,

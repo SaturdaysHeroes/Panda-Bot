@@ -40,3 +40,11 @@
 2018-09-05 15:44:27 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2018-09-05 15:44:27 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-kg6w)
 2018-09-05 15:44:28 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-kg6w, discord-sessions-prd-1-23)
+2018-09-05 17:27:37 | [WARNING] | Uncached Member (227131824533405706) on VOICE_STATE_UPDATE
+2018-09-05 19:21:56 | [WARNING] | Uncached Member (326441717114994689) on VOICE_STATE_UPDATE
+2018-09-05 20:19:50 | [WARNING] | Uncached Member (326441717114994689) on VOICE_STATE_UPDATE
+2018-09-05 20:55:11 | [INFO]    | Shard 0 : Disconnected
+2018-09-05 20:55:11 | [INFO]    | Shard 0 : Reconnecting after 1097 ms...
+2018-09-05 20:55:13 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-05 20:55:13 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-v1h0)
+2018-09-05 20:55:13 | [INFO]    | Shard 0 : Received RESUMED (gateway-prd-main-v1h0, discord-sessions-prd-1-23)
