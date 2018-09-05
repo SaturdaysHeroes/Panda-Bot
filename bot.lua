@@ -80,7 +80,7 @@ client:on("messageCreate", function(message)
     end 
 
     --[[ General Commands ]]--
-    
+
 	if args[1] == prefix.."paczka" then 
         message:reply("Oto paczka serwera CityRP: https://steamcommunity.com/workshop/filedetails/?id=599155037")
     end
@@ -150,20 +150,29 @@ client:on("messageCreate", function(message)
     --[[ Developer Commands ]]--
 
     if args[1] == devPrefix.."info" then 
-        if member.tag == "SaturdaysHeroes#4859" == false then message:reply("Brak permisji!") return end
         message:delete()
         message:reply {
-            content = "[DEV] "..member.discriminator.." | "..member.mentionString.." | "..member.tag,
+            content = "[DEV] "..member.discriminator.." | "..member.id.." | "..member.tag,
         }
     end
 
-    if args[1] == devPrefix.."admin" then 
-        if member.tag == "SaturdaysHeroes#4859" == false then message:reply("Brak permisji!") return end
+    if args[1] == devPrefix.."giver" then 
+        if member.tag ~= "SaturdaysHeroes#4859" then message:reply("Brak permisji!") return end
         if args[2] == nil then message:reply("ERROR: args[2] == nil") return end
         message:delete()
         member:addRole(args[2])
         message:reply {
             content = "[DEV] Nadano rangę "..args[2].."!",
+        }
+    end
+
+     if args[1] == devPrefix.."remover" then 
+        if member.tag ~= "SaturdaysHeroes#4859" then message:reply("Brak permisji!") return end
+        if args[2] == nil then message:reply("ERROR: args[2] == nil") return end
+        message:delete()
+        member:removeRole(args[2])
+        message:reply {
+            content = "[DEV] Zabrano rangę "..args[2].."!",
         }
     end
 
