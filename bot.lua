@@ -27,6 +27,7 @@ client:on("messageCreate", function(message)
 	local author = message.author
     local member = message.guild.members:get(message.author.id)
     local args = content:split(" ")
+    local mentioned = mentionedUsers
 
 	--[[ Help Commands ]]--
 
@@ -151,6 +152,18 @@ client:on("messageCreate", function(message)
     end
 
     --[[ Admin Commands ]]--
+    if args[1] == prefix.."kick" then 
+        if member.tag ~= "SaturdaysHeroes#4859" then message:reply("Brak permisji!") return end
+        if args[2] == nil then message:reply("ERROR: Nie podałeś gracza, którego chcesz zkickować") return end
+
+        for k, v in pairs(message.mentionedUsers) do 
+            local u = message.guild:getMember(v)
+            if not u then return end
+
+            u:kick("Kick nadany przez PandaBot")
+            message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
+        end
+    end
 
     --[[ Developer Commands ]]--
 
