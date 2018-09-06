@@ -7,3 +7,5 @@ The code could be a bit messy, first time working with the library and the disco
 
 I would recommend anyone to check out this API if they know Lua, Javascript is a really handy language to learn but if you're not really interested in anything apart from the Discord.js API then I would try this out. 
 
+The bot features a few commands, it has simple reply-based commands which only send links and some other info but it also has other commands which give out discord roles. Additionally it has admin commands (such as .clear and .kick) and a few developer commands which were handy in the process of coding it. 
+
