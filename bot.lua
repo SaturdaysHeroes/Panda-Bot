@@ -164,9 +164,7 @@ client:on("messageCreate", function(message)
                 end 
             end 
         end
-
-        if args[2] == nil then message:reply("ERROR: Nie podałeś gracza, którego chcesz zkickować") return end
-
+        if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zkickować") return end
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
