@@ -153,15 +153,30 @@ client:on("messageCreate", function(message)
     end
 
     --[[ Admin Commands ]]--
+
     if args[1] == prefix.."kick" then 
-        if member.tag ~= "SaturdaysHeroes#4859" then message:reply("Brak permisji!") return end
+        if not member:hasRole("439738495515361300") then -- Moderator CityRP
+            if not member:hasRole("439738097379311626") then -- Administrator CityRP
+                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
+                    if not member:hasRole("479771962583941120") then -- Developer CityRP
+                        return 
+                    end
+                end 
+            end 
+        end
+
         if args[2] == nil then message:reply("ERROR: Nie podałeś gracza, którego chcesz zkickować") return end
 
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
+            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
+            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
+            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
+            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
+            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytknownik jest botem") return end
 
-            u:kick("Kick nadany przez PandaBot")
+            u:kick("Bot nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
         end
     end
