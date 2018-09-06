@@ -150,12 +150,14 @@ client:on("messageCreate", function(message)
         }
     end
 
+    --[[ Admin Commands ]]--
+
     --[[ Developer Commands ]]--
 
     if args[1] == devPrefix.."info" then 
         message:delete()
         message:reply {
-            content = "[DEV] "..member.discriminator.." | "..member.id.." | "..member.tag,
+            content = "[DEV] "..member.discriminator.." | "..member.id.." | "..member.tag.." | "..member.mentionString,
         }
     end
 

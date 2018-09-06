@@ -458,3 +458,24 @@
 2018-09-05 23:15:31 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2018-09-05 23:15:31 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-wd86)
 2018-09-05 23:15:31 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-wd86, discord-sessions-prd-1-15)
+2018-09-05 23:19:35 | [ERROR]   | 403 - FORBIDDEN : PUT https://discordapp.com/api/v7/guilds/420592633753239556/members/124477721437929472/roles/420595329033830412
+2018-09-05 23:42:06 | [WARNING] | Uncached Member (420611830499770399) on VOICE_STATE_UPDATE
+2018-09-06 01:05:28 | [WARNING] | Uncached Member (456927359388614668) on VOICE_STATE_UPDATE
+2018-09-06 01:20:50 | [INFO]    | Shard 0 : Disconnected
+2018-09-06 01:20:50 | [INFO]    | Shard 0 : Reconnecting after 933 ms...
+2018-09-06 01:20:52 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-06 01:20:52 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-wd86)
+2018-09-06 01:20:52 | [INFO]    | Shard 0 : Received RESUMED (gateway-prd-main-wd86, discord-sessions-prd-1-15)
+2018-09-06 02:39:56 | [WARNING] | Shard 0 : 1001 - Connection closed
+2018-09-06 02:39:56 | [INFO]    | Shard 0 : Disconnected
+2018-09-06 02:39:56 | [INFO]    | Shard 0 : Reconnecting after 1088 ms...
+2018-09-06 02:39:57 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-06 02:39:57 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-0vfv)
+2018-09-06 02:39:57 | [INFO]    | Shard 0 : Received RESUMED (gateway-prd-main-0vfv, discord-sessions-prd-1-15)
+2018-09-06 14:41:39 | [INFO]    | Discordia 2.4.1
+2018-09-06 14:41:39 | [INFO]    | Connecting to Discord...
+2018-09-06 14:41:40 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-06 14:41:40 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-06 14:41:40 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-06 14:41:40 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-xkfb)
+2018-09-06 14:41:41 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-xkfb, discord-sessions-prd-1-11)
