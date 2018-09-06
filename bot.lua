@@ -170,11 +170,11 @@ client:on("messageCreate", function(message)
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
-            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
-            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
-            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
-            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytknownik jest członkiem administracji") return end
-            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytknownik jest botem") return end
+            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
             u:kick("Bot nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
