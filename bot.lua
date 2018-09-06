@@ -13,7 +13,7 @@ client:on('ready', function()
 end)
 
 client:on("ready", function()
-    client:setGame(prefix.."help")
+    client:setGame(prefix.."help".." / "..prefix.."admin")
 end)
 
 client:on("memberJoin", function(member)
@@ -29,6 +29,7 @@ client:on("messageCreate", function(message)
     local member = message.guild.members:get(message.author.id)
     local args = content:split(" ")
     local mentioned = mentionedUsers
+    local channel = message.channel
 
 	--[[ Help Commands ]]--
 
@@ -82,6 +83,37 @@ client:on("messageCreate", function(message)
 				color = 0xFF8C00 
 			}
 		}
+
+        
+    end 
+
+    if args[1] == prefix.."admin" then
+		message:reply {
+			embed = {
+				author = {
+					name = author.username,
+					icon_url = author.avatarURL
+				},
+				fields = { 
+					{
+						name = ".kick",
+						value = "Kickuje użytkownika z discorda, pamiętaj o @",
+						inline = false
+					},
+					{
+						name = ".clear",
+						value = "Usuwa od 1-50 wiadomości z kanału",
+						inline = false
+					}
+				},
+				footer = {
+					text = "Stworzone przez SaturdaysHeroes#4859"
+				},
+				color = 0xFF8C00 
+			}
+		}
+
+        
     end 
 
     --[[ General Commands ]]--
@@ -164,10 +196,13 @@ client:on("messageCreate", function(message)
                 end 
             end 
         end
+
         if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zkickować") return end
+        
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
+
             if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
@@ -177,6 +212,29 @@ client:on("messageCreate", function(message)
             u:kick("Bot nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
         end
+    end
+
+    if args[1] == prefix.."clear" then 
+        if not member:hasRole("439738495515361300") then -- Moderator CityRP
+            if not member:hasRole("439738097379311626") then -- Administrator CityRP
+                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
+                    if not member:hasRole("479771962583941120") then -- Developer CityRP
+                        return 
+                    end
+                end 
+            end 
+        end
+
+        if args[2] == nil then message:reply("ERROR: Nie podałeś liczby wiadomości do usunięcia (2-50)") return end
+
+        amount = tonumber(args[2])
+        if not amount then message:reply("ERROR: Nie podałeś liczby wiadomości do usunięcia (2-50)") return end
+        if amount > 50 then message:reply("ERROR: Nie możesz usunąć więcej niż 50 wiadomości!") return end
+        local msgTable = message.channel:getMessages(amount+1)
+        local cachedMessages = {}
+
+        message.channel:bulkDelete(msgTable)
+        message.channel:send(amount.." wiadomości zostało usuniętych przez "..author.tag)
     end
 
     --[[ Developer Commands ]]--
