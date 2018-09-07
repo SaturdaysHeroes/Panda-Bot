@@ -34,7 +34,7 @@ client:on("messageCreate", function(message)
     --[[ Checks ]]--
     if member:hasRole("484008135737081856") then 
         message:delete()
-        member:send("Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
+        member:send("[PandaBot] Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
     end
 
 	--[[ Help Commands ]]--
