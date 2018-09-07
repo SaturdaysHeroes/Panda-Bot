@@ -8,6 +8,7 @@ local jobPrefix = "_"
 
 discordia.extensions()
 
+
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
 end)
@@ -28,8 +29,13 @@ client:on("messageCreate", function(message)
 	local author = message.author
     local member = message.guild.members:get(message.author.id)
     local args = content:split(" ")
-    local mentioned = mentionedUsers
     local channel = message.channel
+
+    --[[ Checks ]]--
+    if member:hasRole("484008135737081856") then 
+        message:delete()
+        member:send("Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
+    end
 
 	--[[ Help Commands ]]--
 
@@ -237,6 +243,34 @@ client:on("messageCreate", function(message)
         message.channel:send(amount.." wiadomości zostało usuniętych przez "..author.tag)
     end
 
+    if args[1] == prefix.."mute" then 
+        if not member:hasRole("439738495515361300") then -- Moderator CityRP
+            if not member:hasRole("439738097379311626") then -- Administrator CityRP
+                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
+                    if not member:hasRole("479771962583941120") then -- Developer CityRP
+                        return 
+                    end
+                end 
+            end 
+        end
+
+        if args[2] == nil then message:reply("ERROR: Nie podałeś osoby którą chcesz zmutować") return end
+
+        for k, v in pairs(message.mentionedUsers) do 
+            local u = message.guild:getMember(v)
+            if not u then return end
+
+            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
+
+            u:addRole("484008135737081856")
+            message.channel:send(u.mentionString.." został zmutowany".." przez "..author.tag)
+        end
+
+    end
     --[[ Developer Commands ]]--
 
     if args[1] == devPrefix.."info" then 
@@ -265,7 +299,6 @@ client:on("messageCreate", function(message)
             content = "[DEV] Zabrano rangę "..args[2].."!",
         }
     end
-
 
 end)
 
