@@ -103,14 +103,24 @@ client:on("messageCreate", function(message)
 				fields = { 
 					{
 						name = ".kick",
-						value = "Kickuje użytkownika z discorda, pamiętaj o @",
+						value = "Kickuje użytkownika z discorda",
 						inline = false
 					},
 					{
 						name = ".clear",
 						value = "Usuwa od 1-50 wiadomości z kanału",
 						inline = false
-					}
+					},
+                    {
+                        name = ".mute",
+                        value = "Mutuje użytkownika",
+                        inline = false
+                    },
+                    {
+                        name = ".unmute",
+                        value = "Odmutowuje użytkownika",
+                        inline = false
+                    }
 				},
 				footer = {
 					text = "Stworzone przez SaturdaysHeroes#4859"
