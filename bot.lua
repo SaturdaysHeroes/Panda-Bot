@@ -271,6 +271,35 @@ client:on("messageCreate", function(message)
         end
 
     end
+
+    if args[1] == prefix.."unmute" then 
+
+        if not member:hasRole("439738495515361300") then -- Moderator CityRP
+            if not member:hasRole("439738097379311626") then -- Administrator CityRP
+                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
+                    if not member:hasRole("479771962583941120") then -- Developer CityRP
+                        return 
+                    end
+                end 
+            end 
+        end
+
+        if args[2] == nil then message:reply("ERROR: Nie podałeś osoby którą chcesz zmutować") return end
+
+        for k, v in pairs(message.mentionedUsers) do 
+            local u = message.guild:getMember(v)
+            if not u then return end
+
+            if u:hasRole("484008135737081856") then 
+                u:removeRole("484008135737081856")
+                message.channel:send(u.mentionString.." został odmutowany".." przez "..author.tag)
+            else
+                message.channel:send("ERROR: Użytkownik "..u.tag.." nie jest zmutowany!")
+            end
+        end
+
+    end
+
     --[[ Developer Commands ]]--
 
     if args[1] == devPrefix.."info" then 
