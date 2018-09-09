@@ -8,7 +8,6 @@ local jobPrefix = "-"
 
 discordia.extensions()
 
-
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
 end)
@@ -30,6 +29,10 @@ client:on("messageCreate", function(message)
     local member = message.guild.members:get(message.author.id)
     local args = content:split(" ")
     local channel = message.channel
+
+    local function pbError(message)
+        message:reply("ERROR: "..message)
+    end
 
     --[[ Checks ]]--
     if member:hasRole("484008135737081856") then 
@@ -218,7 +221,7 @@ client:on("messageCreate", function(message)
             end 
         end 
 
-        if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zkickować") return end
+        if args[2] == nil then pbError("Nie podałeś gracza którego chcesz zkickować") return end
         
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
@@ -230,7 +233,7 @@ client:on("messageCreate", function(message)
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
-            u:kick("Bot nadany przez PandaBot")
+            u:kick("Kick nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
         end
     end
