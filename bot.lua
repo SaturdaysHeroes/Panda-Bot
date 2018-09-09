@@ -4,7 +4,7 @@ local botToken = "NDg2NTk1Nzc4NzU3MDAxMjQ4.DnBa9Q._1xUewq0hth0D-EBoblfDQnJCGc"
 
 local prefix = "."
 local devPrefix = "*"
-local jobPrefix = "_"
+local jobPrefix = "-"
 
 discordia.extensions()
 
@@ -34,7 +34,7 @@ client:on("messageCreate", function(message)
     --[[ Checks ]]--
     if member:hasRole("484008135737081856") then 
         message:delete()
-        member:send("[PandaBot] Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
+        member:send("Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
     end
 
 	--[[ Help Commands ]]--
@@ -135,7 +135,10 @@ client:on("messageCreate", function(message)
     --[[ General Commands ]]--
 
 	if args[1] == prefix.."paczka" then 
-        message:reply("Oto paczka serwera CityRP: https://steamcommunity.com/workshop/filedetails/?id=599155037")
+        message:reply {
+            content = "Oto paczka serwera CityRP: https://steamcommunity.com/workshop/filedetails/?id=599155037",
+            mention = author,
+        }
     end
     
     if args[1] == prefix.."sklep" then 
@@ -207,11 +210,13 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        return 
+                        if not member.tag == "SaturdaysHeroes#4859" then 
+                            return 
+                        end
                     end
                 end 
             end 
-        end
+        end 
 
         if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zkickować") return end
         
@@ -235,7 +240,9 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        return 
+                        if not member.tag == "SaturdaysHeroes#4859" then 
+                            return 
+                        end
                     end
                 end 
             end 
@@ -258,7 +265,9 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        return 
+                        if not member.tag == "SaturdaysHeroes#4859" then 
+                            return 
+                        end
                     end
                 end 
             end 
@@ -277,6 +286,7 @@ client:on("messageCreate", function(message)
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
             u:addRole("484008135737081856")
+            u:mute()
             message.channel:send(u.mentionString.." został zmutowany".." przez "..author.tag)
         end
 
@@ -288,7 +298,9 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        return 
+                        if not member.tag == "SaturdaysHeroes#4859" then 
+                            return 
+                        end
                     end
                 end 
             end 
@@ -302,6 +314,7 @@ client:on("messageCreate", function(message)
 
             if u:hasRole("484008135737081856") then 
                 u:removeRole("484008135737081856")
+                u:unmute()
                 message.channel:send(u.mentionString.." został odmutowany".." przez "..author.tag)
             else
                 message.channel:send("ERROR: Użytkownik "..u.tag.." nie jest zmutowany!")
@@ -313,7 +326,7 @@ client:on("messageCreate", function(message)
     --[[ Developer Commands ]]--
 
     if args[1] == devPrefix.."info" then 
-        message:delete()
+        message:delete()    
         message:reply {
             content = "[DEV] "..member.discriminator.." | "..member.id.." | "..member.tag.." | "..member.mentionString,
         }
