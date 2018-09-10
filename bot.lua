@@ -23,6 +23,7 @@ end)
 client:on("messageCreate", function(message)
 
     if message.guild == nil then return end 
+    if message.author.bot == true then return end 
 
 	local content = message.content:lower()
 	local author = message.author
@@ -213,9 +214,8 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member.tag == "SaturdaysHeroes#4859" then 
-                            return 
-                        end
+                        pbError("Brak permisji!")
+                        return 
                     end
                 end 
             end 
@@ -243,9 +243,8 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member.tag == "SaturdaysHeroes#4859" then 
-                            return 
-                        end
+                        pbError("Brak permisji!")
+                        return
                     end
                 end 
             end 
@@ -268,9 +267,8 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member.tag == "SaturdaysHeroes#4859" then 
-                            return 
-                        end
+                        pbError("Brak permisji!")
+                        return
                     end
                 end 
             end 
@@ -301,9 +299,8 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member.tag == "SaturdaysHeroes#4859" then 
-                            return 
-                        end
+                        pbError("Brak permisji!")
+                        return
                     end
                 end 
             end 
