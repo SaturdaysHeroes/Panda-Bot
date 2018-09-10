@@ -31,10 +31,6 @@ client:on("messageCreate", function(message)
     local args = content:split(" ")
     local channel = message.channel
 
-    local function pbError(msg)
-        message:reply("ERROR: "..msg)
-    end
-
     --[[ Checks ]]--
     if member:hasRole("484008135737081856") then 
         message:delete()
@@ -214,24 +210,24 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        pbError("Brak permisji!")
+                        message:reply("ERROR: Brak permisji!")
                         return 
                     end
                 end 
             end 
         end 
 
-        if args[2] == nil then pbError("Nie podałeś gracza którego chcesz zkickować") return end
+        if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zkickować") return end
         
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
 
-            if u:hasRole("439738495515361300") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("439738097379311626") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420596036914905090") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("479771962583941120") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("422374774610722816") then pbError("Użytkownik jest botem") return end
+            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
             u:kick("Kick nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
@@ -243,18 +239,18 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        pbError("Brak permisji!")
+                        message:reply("ERROR: Brak permisji!")
                         return
                     end
                 end 
             end 
         end
 
-        if args[2] == nil then pbError("Nie podałeś liczby wiadomości do usunięcia (2-50)") return end
+        if args[2] == nil then message:reply("ERROR: Nie podałeś liczby wiadomości do usunięcia (2-50)") return end
 
         amount = tonumber(args[2])
-        if not amount then pbError("Nie podałeś liczby wiadomości do usunięcia (2-50)") return end
-        if amount > 50 then pbError("Nie możesz usunąć więcej niż 50 wiadomości!") return end
+        if not amount then message:reply("ERROR: Nie podałeś liczby wiadomości do usunięcia (2-50)") return end
+        if amount > 50 then message:reply("ERROR: Nie możesz usunąć więcej niż 50 wiadomości!") return end
         local msgTable = message.channel:getMessages(amount+1)
         local cachedMessages = {}
 
@@ -267,24 +263,24 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        pbError("Brak permisji!")
+                        message:reply("ERROR: Brak permisji!")
                         return
                     end
                 end 
             end 
         end
 
-        if args[2] == nil then pbError("Nie podałeś osoby którą chcesz zmutować") return end
+        if args[2] == nil then message:reply("Nie podałeś osoby którą chcesz zmutować") return end
 
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
 
-            if u:hasRole("439738495515361300") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("439738097379311626") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420596036914905090") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("479771962583941120") then pbError("Użytkownik jest członkiem administracji") return end
-            if u:hasRole("422374774610722816") then pbError("Użytkownik jest botem") return end
+            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
             u:addRole("484008135737081856")
             u:mute()
@@ -299,14 +295,14 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        pbError("Brak permisji!")
+                        message:reply("ERROR: Brak permisji!")
                         return
                     end
                 end 
             end 
         end
 
-        if args[2] == nil then pbError("Nie podałeś osoby którą chcesz zmutować") return end
+        if args[2] == nil then message:reply("ERROR: Nie podałeś osoby którą chcesz zmutować") return end
 
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
@@ -334,7 +330,7 @@ client:on("messageCreate", function(message)
 
     if args[1] == devPrefix.."giver" then 
         if member.tag ~= "SaturdaysHeroes#4859" then message:reply("Brak permisji!") return end
-        if args[2] == nil then pbError("args[2] == nil") return end
+        if args[2] == nil then message:reply("args[2] == nil") return end
         message:delete()
         member:addRole(args[2])
         message:reply {
@@ -344,7 +340,7 @@ client:on("messageCreate", function(message)
 
      if args[1] == devPrefix.."remover" then 
         if member.tag ~= "SaturdaysHeroes#4859" then message:reply("Brak permisji!") return end
-        if args[2] == nil then pbError("args[2] == nil") return end
+        if args[2] == nil then message:reply("args[2] == nil") return end
         message:delete()
         member:removeRole(args[2])
         message:reply {
