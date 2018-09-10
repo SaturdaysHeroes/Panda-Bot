@@ -1513,3 +1513,4 @@
 2018-09-10 19:25:20 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-33qs)
 2018-09-10 19:25:38 | [INFO]    | Shard 0 : Session invalidated, re-identifying...
 2018-09-10 19:25:42 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-33qs, discord-sessions-prd-1-25)
+2018-09-10 19:29:10 | [ERROR]   | 403 - FORBIDDEN : DELETE https://discordapp.com/api/v7/guilds/420592633753239556/members/386284993481015320?reason=Kick%20nadany%20przez%20PandaBot
