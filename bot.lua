@@ -287,6 +287,7 @@ client:on("messageCreate", function(message)
             if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
             u:addRole("484008135737081856")
@@ -311,7 +312,7 @@ client:on("messageCreate", function(message)
             end 
         end
 
-        if args[2] == nil then message:reply("ERROR: Nie podałeś osoby którą chcesz zmutować") return end
+        if args[2] == nil then message:reply("ERROR: Nie podałeś osoby którą chcesz odmutować") return end
 
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
