@@ -210,12 +210,14 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        message:reply("ERROR: Brak permisji!")
-                        return 
+                        if not member:hasRole("420595329033830412") then -- Własciciel
+                            message:reply("ERROR: Brak permisji!")
+                            return
+                        end
                     end
                 end 
             end 
-        end 
+        end
 
         if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zkickować") return end
         
@@ -227,6 +229,7 @@ client:on("messageCreate", function(message)
             if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
             u:kick("Kick nadany przez PandaBot")
@@ -239,8 +242,10 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        message:reply("ERROR: Brak permisji!")
-                        return
+                        if not member:hasRole("420595329033830412") then -- Własciciel
+                            message:reply("ERROR: Brak permisji!")
+                            return
+                        end
                     end
                 end 
             end 
@@ -263,8 +268,10 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        message:reply("ERROR: Brak permisji!")
-                        return
+                        if not member:hasRole("420595329033830412") then -- Własciciel
+                            message:reply("ERROR: Brak permisji!")
+                            return
+                        end
                     end
                 end 
             end 
@@ -295,8 +302,10 @@ client:on("messageCreate", function(message)
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
                 if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
                     if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        message:reply("ERROR: Brak permisji!")
-                        return
+                        if not member:hasRole("420595329033830412") then -- Własciciel
+                            message:reply("ERROR: Brak permisji!")
+                            return
+                        end
                     end
                 end 
             end 
