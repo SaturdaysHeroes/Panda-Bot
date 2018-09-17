@@ -120,6 +120,11 @@ client:on("messageCreate", function(message)
                         name = ".unmute",
                         value = "Odmutowuje użytkownika",
                         inline = false
+                    },
+                    {
+                        name = ".ban"
+                        value = "Banuje użytkownika",
+                        inline = false
                     }
 				},
 				footer = {
