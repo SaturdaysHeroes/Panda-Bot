@@ -262,9 +262,9 @@ client:on("messageCreate", function(message)
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            --if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
+            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
 
-            u:ban("Ban nadany przez PandaBot", 0)
+            u:ban("Ban nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zbanowany".." przez "..author.tag)
         end
     end
