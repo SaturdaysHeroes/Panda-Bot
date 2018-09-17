@@ -122,7 +122,7 @@ client:on("messageCreate", function(message)
                         inline = false
                     },
                     {
-                        name = ".ban"
+                        name = ".ban",
                         value = "Banuje użytkownika",
                         inline = false
                     }
