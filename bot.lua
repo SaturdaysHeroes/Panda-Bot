@@ -237,6 +237,38 @@ client:on("messageCreate", function(message)
         end
     end
 
+     if args[1] == prefix.."ban" then 
+        if not member:hasRole("439738495515361300") then -- Moderator CityRP
+            if not member:hasRole("439738097379311626") then -- Administrator CityRP
+                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
+                    if not member:hasRole("479771962583941120") then -- Developer CityRP
+                        if not member:hasRole("420595329033830412") then -- Własciciel
+                            message:reply("ERROR: Brak permisji!")
+                            return
+                        end
+                    end
+                end 
+            end 
+        end
+
+        if args[2] == nil then message:reply("ERROR: Nie podałeś gracza którego chcesz zbanować") return end
+        
+        for k, v in pairs(message.mentionedUsers) do 
+            local u = message.guild:getMember(v)
+            if not u then return end
+
+            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
+            --if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
+
+            u:ban("Ban nadany przez PandaBot", 0)
+            message.channel:send(u.mentionString.." został zbanowany".." przez "..author.tag)
+        end
+    end
+
     if args[1] == prefix.."clear" then 
         if not member:hasRole("439738495515361300") then -- Moderator CityRP
             if not member:hasRole("439738097379311626") then -- Administrator CityRP
