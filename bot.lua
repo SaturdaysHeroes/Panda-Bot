@@ -32,6 +32,7 @@ client:on("messageCreate", function(message)
     local channel = message.channel
 
     --[[ Checks ]]--
+    
     if member:hasRole("484008135737081856") then 
         message:delete()
         member:send("Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
