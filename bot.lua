@@ -1,12 +1,38 @@
 local discordia = require('discordia')
+local httpCodec = require('http-codec')
 local client = discordia.Client()
 local botToken = "NDg2NTk1Nzc4NzU3MDAxMjQ4.DnBa9Q._1xUewq0hth0D-EBoblfDQnJCGc"
+local http = require("coro-http")
+local json = require("json")
 
 local prefix = "."
 local devPrefix = "*"
 local jobPrefix = "-"
 
 discordia.extensions()
+
+--[[ Functions ]]--
+local cleaner = {
+  { "&amp;", "&" },
+  { "&#151;", "-" },
+  { "&#146;", "'" },
+  { "&#160;", " " },
+  { "<br.*/>", "\n" },
+  { "</p>", "\n" },
+  { "(%b<>)", "\n" },
+  { "\n\n*", "\n" },
+  { "\n*$", "" },
+  { "^\n*", "" },
+}
+local function stripHTML(html)
+  for i=1, #cleaner do
+    local cleans = cleaner[i]
+    html = string.gsub( html, cleans[1], cleans[2] )
+  end
+  return html
+end
+
+--[[ Events ]]--
 
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
@@ -207,6 +233,24 @@ client:on("messageCreate", function(message)
             content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/eg52J5a",
             mention = author,
         }
+    end
+
+    if args[1] == prefix.."gracze" then 
+        coroutine.wrap(function()
+            local headers = {
+                {"accept", "application/json"}
+            }
+            local url = "http://api.saturdaysheroes.me/gmod/playercount/cityrp.php"
+
+            local res, body = http.request("GET", url, headers)
+            
+        
+            local api = json.decode(stripHTML(body))
+                message:reply{
+                    content = "Na serwerze jest akutalnie **"..tostring(api.players).."/"..tostring(api.playersmax).."** graczy!",
+                    mention = author,
+                }
+        end)()  
     end
 
     --[[ Admin Commands ]]--
