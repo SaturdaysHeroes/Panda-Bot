@@ -100,6 +100,11 @@ client:on("messageCreate", function(message)
                         inline = false
                     },
                     {
+                        name = ".gracze",
+                        value = "Wysyła aktualną liczbę graczy na serwerze",
+                        inline = false
+                    },
+                    {
                         name = ".verify",
                         value = "Weryfikuje autora wiadomości",
                         inline = false
