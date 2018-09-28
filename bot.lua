@@ -194,7 +194,7 @@ client:on("messageCreate", function(message)
 
     if args[1] == prefix.."ip" then 
         message:reply {
-            content = "Oto IP CityRP: **185.11.103.89:27085**, możesz również dołączyć kilakając w steam://connect185.11.103.89:27085",
+            content = "Oto IP serwera CityRP: **185.11.103.89:27085**",
             mention = author,
         }
     end

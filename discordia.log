@@ -709,3 +709,28 @@
 2018-09-27 17:05:14 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2018-09-27 17:05:14 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-9qlr)
 2018-09-27 17:05:14 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-9qlr, discord-sessions-prd-1-8)
+2018-09-27 17:06:40 | [INFO]    | Discordia 2.4.1
+2018-09-27 17:06:40 | [INFO]    | Connecting to Discord...
+2018-09-27 17:06:40 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-27 17:06:40 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-27 17:06:40 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-27 17:06:40 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-tds8)
+2018-09-27 17:06:41 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-tds8, discord-sessions-prd-1-13)
+2018-09-27 18:16:06 | [WARNING] | Uncached Member (361899082828218378) on VOICE_STATE_UPDATE
+2018-09-27 20:00:01 | [INFO]    | Discordia 2.4.1
+2018-09-27 20:00:01 | [INFO]    | Connecting to Discord...
+2018-09-27 20:00:01 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-27 20:00:02 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-27 20:00:02 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-27 20:00:02 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-rskw)
+2018-09-27 20:00:03 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-rskw, discord-sessions-prd-1-11)
+2018-09-27 22:31:25 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-27 22:34:21 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 13:45:17 | [INFO]    | Discordia 2.4.1
+2018-09-28 13:45:17 | [INFO]    | Connecting to Discord...
+2018-09-28 13:45:17 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-28 13:45:18 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-28 13:45:18 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-28 13:45:18 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-jptr)
+2018-09-28 13:45:18 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-jptr, discord-sessions-prd-1-9)
+2018-09-28 15:48:30 | [WARNING] | Uncached Member (307941998621491201) on VOICE_STATE_UPDATE
