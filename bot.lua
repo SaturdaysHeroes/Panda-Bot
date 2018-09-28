@@ -43,7 +43,7 @@ client:on("ready", function()
 end)
 
 client:on("memberJoin", function(member)
-    member:send("Witaj na discordzie sieci **Rage-Gangs.pl**, napisz na dowolnym kanale komendę `.help` aby uzyskać listę moich komend. \n \nPamiętaj, aby zajrzeć na zakładkę informacje, znajdziesz tam całą listę administracji, regulaminy oraz kanał do reportowania bugów. \n\nŻyczymy miłej zabawy :)\n\n**- Zarząd sieci RGngs**")
+    member:send("Witaj na discordzie sieci **Rage-Gangs.pl**, napisz na dowolnym kanale komendę `.help` aby uzyskać listę moich komend. \n \nPamiętaj, aby zajrzeć na zakładkę informacje, znajdziesz tam całą listę administracji, regulaminy oraz wszelkie inne informacje dotyczące naszej sieci. \n\n**- Zarząd sieci RGngs**")
 end)
 
 client:on("messageCreate", function(message)
