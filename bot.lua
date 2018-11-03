@@ -75,7 +75,7 @@ client:on("messageCreate", function(message)
 				},
 				fields = { 
 					{
-						name = ".paczka",
+						name = ".grupa",
 						value = "Wysyła link do paczki serwera CityRP",
 						inline = false
 					},
@@ -90,7 +90,7 @@ client:on("messageCreate", function(message)
                         inline = false
                     },
                     {
-                        name = ".apelacja",
+                        name = ".forum",
                         value = "Wysyła link do strony z apelacjami",
                         inline = false
                     },
@@ -102,16 +102,6 @@ client:on("messageCreate", function(message)
                     {
                         name = ".gracze",
                         value = "Wysyła aktualną liczbę graczy na serwerze",
-                        inline = false
-                    },
-                    {
-                        name = ".verify",
-                        value = "Weryfikuje autora wiadomości",
-                        inline = false
-                    },
-                    {
-                        name = ".nsfw",
-                        value = "Nadaje dostęp do kanałów NSFW",
                         inline = false
                     }
 				},
