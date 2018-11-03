@@ -43,7 +43,7 @@ client:on("ready", function()
 end)
 
 client:on("memberJoin", function(member)
-    member:send("Witaj na discordzie sieci **Rage-Gangs.pl**, napisz na dowolnym kanale komendę `.help` aby uzyskać listę moich komend. \n \nPamiętaj, aby zajrzeć na zakładkę informacje, znajdziesz tam całą listę administracji, regulaminy oraz wszelkie inne informacje dotyczące naszej sieci. \n\n**- Zarząd sieci RGngs**")
+    member:send("Witaj na discordzie projektu Firestone Foundation, aby uzyskać listę moich komend napisz na dowolnym kanale `.help`. \n \nProjekt jest cały czas rozwijany dlatego cenimy każdą propozycję i opinię naszych graczy, jeżeli chcesz dołożyć swoją cegiełkę do projektu to możesz śmiało zadawać pytania czy dawać swoje pomysły. Jeżeli interesują cię informację dotyczące prac nad projektem, zajrzyj w kategorię `Development`. Regulamin oraz ogłoszenia znajdziesz pod kategorią `Informacje`. \n\n**Życzymy miłej zabawy!**")
 end)
 
 client:on("messageCreate", function(message)
@@ -59,7 +59,7 @@ client:on("messageCreate", function(message)
 
     --[[ Checks ]]--
     
-    if member:hasRole("484008135737081856") then 
+    if member:hasRole("508359949655605289") then 
         message:delete()
         member:send("Nie możesz wysyłać wiadomości ponieważ jesteś zmutowany, skontaktuj się z administratorem!")
     end
@@ -122,7 +122,6 @@ client:on("messageCreate", function(message)
 			}
 		}
 
-        
     end 
 
     if args[1] == prefix.."admin" then
@@ -171,34 +170,35 @@ client:on("messageCreate", function(message)
 
     --[[ General Commands ]]--
 
-	if args[1] == prefix.."paczka" then 
+	if args[1] == prefix.."grupa" then 
         message:reply {
-            content = "Oto paczka serwera CityRP: https://steamcommunity.com/workshop/filedetails/?id=599155037",
+            content = "Chcesz otrzymywać powiadomienia? Zapraszamy na grupę steam: x",
             mention = author,
         }
     end
     
     if args[1] == prefix.."sklep" then 
         message:reply {
-            content = "Oto nasz sklep: https://sklep.rage-gangs.pl",
+            content = "Jeżeli chcesz wsprzeć projekt to serdecznie zapraszamy do naszego sklepu: x",
             mention = author,
         }
     end
 
-    if args[1] == prefix.."apelacja" then 
+    if args[1] == prefix.."forum" then 
         message:reply {
-            content = "Zostałeś zbanowany? Złóż apelację na https://ban.rage-gangs.pl",
+            content = "Chcesz złożyć podanię do administracji, może napisac apepację? Zapraszamy na forum: x",
             mention = author,
         }
     end
 
     if args[1] == prefix.."ip" then 
         message:reply {
-            content = "Oto IP serwera CityRP: **185.11.103.89:27085**",
+            content = "Oto IP serwera FalloutRP: **x**",
             mention = author,
         }
     end
 
+    --[[
     if args[1] == prefix.."verify" then 
         if member:hasRole("479777556678311955") == true then 
             message:reply {
@@ -232,10 +232,11 @@ client:on("messageCreate", function(message)
             }
         end
     end
+    ]]--
 
     if args[1] == prefix.."discord" then 
         message:reply { 
-            content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/eg52J5a",
+            content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/BmW7vZh",
             mention = author,
         }
     end
@@ -245,29 +246,37 @@ client:on("messageCreate", function(message)
             local headers = {
                 {"accept", "application/json"}
             }
-            local url = "http://api.saturdaysheroes.me/gmod/playercount/cityrp.php"
+            local url = "http://api.saturdaysheroes.me/gmod/playercount/falloutrp.php"
 
             local res, body = http.request("GET", url, headers)
             
         
             local api = json.decode(stripHTML(body))
+                if api.password == 1 then 
+                    password = "Tak"
+                else
+                    password = "Nie"
+                end
+
                 message:reply{
                     content = "Na serwerze jest akutalnie **"..tostring(api.players).."/"..tostring(api.playersmax).."** graczy!",
                     mention = author,
                 }
         end)()  
     end
-
+    
     --[[ Admin Commands ]]--
 
     if args[1] == prefix.."kick" then 
-        if not member:hasRole("439738495515361300") then -- Moderator CityRP
-            if not member:hasRole("439738097379311626") then -- Administrator CityRP
-                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
-                    if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member:hasRole("420595329033830412") then -- Własciciel
-                            message:reply("ERROR: Brak permisji!")
-                            return
+        if not member:hasRole("504734153678258211") then -- Moderator 
+            if not member:hasRole("504734136875876362") then -- Administrator 
+                if not member:hasRole("504734145864531988") then -- Senior Administrator 
+                    if not member:hasRole("504733321230680075") then -- Developer 
+                        if not member:hasRole("505097290382442566") then -- Lead Developer
+                            if not member:hasRole("480689873238622218") then -- Własciciel
+                                message:reply("ERROR: Brak permisji!")
+                                return
+                            end
                         end
                     end
                 end 
@@ -280,12 +289,14 @@ client:on("messageCreate", function(message)
             local u = message.guild:getMember(v)
             if not u then return end
 
+            --[[
             if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
+            ]]--
 
             u:kick("Kick nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
@@ -293,13 +304,15 @@ client:on("messageCreate", function(message)
     end
 
      if args[1] == prefix.."ban" then 
-        if not member:hasRole("439738495515361300") then -- Moderator CityRP
-            if not member:hasRole("439738097379311626") then -- Administrator CityRP
-                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
-                    if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member:hasRole("420595329033830412") then -- Własciciel
-                            message:reply("ERROR: Brak permisji!")
-                            return
+        if not member:hasRole("504734153678258211") then -- Moderator 
+            if not member:hasRole("504734136875876362") then -- Administrator 
+                if not member:hasRole("504734145864531988") then -- Senior Administrator 
+                    if not member:hasRole("504733321230680075") then -- Developer 
+                        if not member:hasRole("505097290382442566") then -- Lead Developer
+                            if not member:hasRole("480689873238622218") then -- Własciciel
+                                message:reply("ERROR: Brak permisji!")
+                                return
+                            end
                         end
                     end
                 end 
@@ -312,12 +325,14 @@ client:on("messageCreate", function(message)
             local u = message.guild:getMember(v)
             if not u then return end
 
+            --[[
             if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
+            ]]--
 
             u:ban("Ban nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zbanowany".." przez "..author.tag)
@@ -325,13 +340,15 @@ client:on("messageCreate", function(message)
     end
 
     if args[1] == prefix.."clear" then 
-        if not member:hasRole("439738495515361300") then -- Moderator CityRP
-            if not member:hasRole("439738097379311626") then -- Administrator CityRP
-                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
-                    if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member:hasRole("420595329033830412") then -- Własciciel
-                            message:reply("ERROR: Brak permisji!")
-                            return
+        if not member:hasRole("504734153678258211") then -- Moderator 
+            if not member:hasRole("504734136875876362") then -- Administrator 
+                if not member:hasRole("504734145864531988") then -- Senior Administrator 
+                    if not member:hasRole("504733321230680075") then -- Developer 
+                        if not member:hasRole("505097290382442566") then -- Lead Developer
+                            if not member:hasRole("480689873238622218") then -- Własciciel
+                                message:reply("ERROR: Brak permisji!")
+                                return
+                            end
                         end
                     end
                 end 
@@ -351,13 +368,15 @@ client:on("messageCreate", function(message)
     end
 
     if args[1] == prefix.."mute" then 
-        if not member:hasRole("439738495515361300") then -- Moderator CityRP
-            if not member:hasRole("439738097379311626") then -- Administrator CityRP
-                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
-                    if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member:hasRole("420595329033830412") then -- Własciciel
-                            message:reply("ERROR: Brak permisji!")
-                            return
+        if not member:hasRole("504734153678258211") then -- Moderator 
+            if not member:hasRole("504734136875876362") then -- Administrator 
+                if not member:hasRole("504734145864531988") then -- Senior Administrator 
+                    if not member:hasRole("504733321230680075") then -- Developer 
+                        if not member:hasRole("505097290382442566") then -- Lead Developer
+                            if not member:hasRole("480689873238622218") then -- Własciciel
+                                message:reply("ERROR: Brak permisji!")
+                                return
+                            end
                         end
                     end
                 end 
@@ -369,13 +388,15 @@ client:on("messageCreate", function(message)
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
-
+        
+            --[[
             if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
+            ]]--
 
             u:addRole("484008135737081856")
             u:mute()
@@ -386,13 +407,15 @@ client:on("messageCreate", function(message)
 
     if args[1] == prefix.."unmute" then 
 
-        if not member:hasRole("439738495515361300") then -- Moderator CityRP
-            if not member:hasRole("439738097379311626") then -- Administrator CityRP
-                if not member:hasRole("420596036914905090") then -- Super Administrator CityRP
-                    if not member:hasRole("479771962583941120") then -- Developer CityRP
-                        if not member:hasRole("420595329033830412") then -- Własciciel
-                            message:reply("ERROR: Brak permisji!")
-                            return
+        if not member:hasRole("504734153678258211") then -- Moderator 
+            if not member:hasRole("504734136875876362") then -- Administrator 
+                if not member:hasRole("504734145864531988") then -- Senior Administrator 
+                    if not member:hasRole("504733321230680075") then -- Developer 
+                        if not member:hasRole("505097290382442566") then -- Lead Developer
+                            if not member:hasRole("480689873238622218") then -- Własciciel
+                                message:reply("ERROR: Brak permisji!")
+                                return
+                            end
                         end
                     end
                 end 
@@ -405,8 +428,8 @@ client:on("messageCreate", function(message)
             local u = message.guild:getMember(v)
             if not u then return end
 
-            if u:hasRole("484008135737081856") then 
-                u:removeRole("484008135737081856")
+            if u:hasRole("508359949655605289") then 
+                u:removeRole("508359949655605289")
                 u:unmute()
                 message.channel:send(u.mentionString.." został odmutowany".." przez "..author.tag)
             else

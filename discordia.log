@@ -734,3 +734,131 @@
 2018-09-28 13:45:18 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-jptr)
 2018-09-28 13:45:18 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-jptr, discord-sessions-prd-1-9)
 2018-09-28 15:48:30 | [WARNING] | Uncached Member (307941998621491201) on VOICE_STATE_UPDATE
+2018-09-28 17:48:35 | [INFO]    | Discordia 2.4.1
+2018-09-28 17:48:35 | [INFO]    | Connecting to Discord...
+2018-09-28 17:48:36 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-28 17:48:36 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-28 17:48:36 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-28 17:48:36 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-5f80)
+2018-09-28 17:48:36 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-5f80, discord-sessions-prd-1-16)
+2018-09-28 18:37:39 | [WARNING] | Uncached Member (420611830499770399) on VOICE_STATE_UPDATE
+2018-09-28 18:45:03 | [WARNING] | Uncached Member (420611830499770399) on VOICE_STATE_UPDATE
+2018-09-28 21:38:33 | [INFO]    | Discordia 2.4.1
+2018-09-28 21:38:33 | [INFO]    | Connecting to Discord...
+2018-09-28 21:38:34 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-28 21:38:34 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-28 21:38:35 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-28 21:38:35 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-8v6p)
+2018-09-28 21:38:35 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-8v6p, discord-sessions-prd-1-26)
+2018-09-28 22:37:21 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 22:37:21 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 22:38:51 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 22:39:25 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 22:40:59 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 22:41:12 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 22:52:23 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-28 23:35:40 | [WARNING] | Uncached Member (285388420430430210) on VOICE_STATE_UPDATE
+2018-09-29 00:00:42 | [WARNING] | Uncached Member (229199409336811521) on VOICE_STATE_UPDATE
+2018-09-29 01:04:54 | [WARNING] | Uncached Member (236963769526386700) on VOICE_STATE_UPDATE
+2018-09-29 09:09:50 | [INFO]    | Shard 0 : Disconnected
+2018-09-29 09:09:50 | [INFO]    | Shard 0 : Reconnecting after 1039 ms...
+2018-09-29 09:09:51 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-29 09:09:51 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-33qs)
+2018-09-29 09:09:51 | [INFO]    | Shard 0 : Received RESUMED (gateway-prd-main-33qs, discord-sessions-prd-1-26)
+2018-09-29 09:56:41 | [INFO]    | Discordia 2.4.1
+2018-09-29 09:56:41 | [INFO]    | Connecting to Discord...
+2018-09-29 09:56:42 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-29 09:56:42 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-29 09:56:42 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-29 09:56:42 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-tds8)
+2018-09-29 09:56:42 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-tds8, discord-sessions-prd-1-13)
+2018-09-29 21:04:51 | [INFO]    | Discordia 2.4.1
+2018-09-29 21:04:51 | [INFO]    | Connecting to Discord...
+2018-09-29 21:04:51 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-29 21:04:52 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-29 21:04:52 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-29 21:04:52 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-04vj)
+2018-09-29 21:04:54 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-04vj, discord-sessions-prd-1-2)
+2018-09-29 23:11:30 | [WARNING] | Uncached Member (235088799074484224) on VOICE_STATE_UPDATE
+2018-09-30 00:00:43 | [WARNING] | Uncached Member (227131824533405706) on VOICE_STATE_UPDATE
+2018-09-30 09:51:53 | [INFO]    | Discordia 2.4.1
+2018-09-30 09:51:53 | [INFO]    | Connecting to Discord...
+2018-09-30 09:51:53 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-30 09:51:54 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-30 09:51:54 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 09:51:54 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-vw40)
+2018-09-30 09:51:54 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-vw40, discord-sessions-prd-1-25)
+2018-09-30 12:37:10 | [INFO]    | Shard 0 : Disconnected
+2018-09-30 12:37:10 | [INFO]    | Shard 0 : Reconnecting after 998 ms...
+2018-09-30 12:37:11 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 12:37:11 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-ssj6)
+2018-09-30 12:37:11 | [INFO]    | Shard 0 : Received RESUMED (gateway-prd-main-ssj6, discord-sessions-prd-1-25)
+2018-09-30 12:44:00 | [INFO]    | Shard 0 : Disconnected
+2018-09-30 12:44:00 | [INFO]    | Shard 0 : Reconnecting after 1042 ms...
+2018-09-30 12:44:01 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 12:44:01 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-5zxn)
+2018-09-30 12:44:02 | [INFO]    | Shard 0 : Received RESUMED (gateway-prd-main-5zxn, discord-sessions-prd-1-25)
+2018-09-30 15:45:28 | [INFO]    | Discordia 2.4.1
+2018-09-30 15:45:28 | [INFO]    | Connecting to Discord...
+2018-09-30 15:45:28 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-30 15:45:28 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-30 15:45:29 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 15:45:29 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-mxv1)
+2018-09-30 15:45:29 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-mxv1, discord-sessions-prd-1-15)
+2018-09-30 16:37:15 | [INFO]    | Shard 0 : Disconnected
+2018-09-30 16:37:15 | [INFO]    | Shard 0 : Reconnecting after 936 ms...
+2018-09-30 16:37:17 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 16:37:17 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-4fwp)
+2018-09-30 16:37:17 | [INFO]    | Shard 0 : Session invalidated, re-identifying...
+2018-09-30 16:37:21 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-4fwp, discord-sessions-prd-1-24)
+2018-09-30 16:41:38 | [INFO]    | Discordia 2.4.1
+2018-09-30 16:41:38 | [INFO]    | Connecting to Discord...
+2018-09-30 16:41:39 | [INFO]    | Authenticated as Panda Bot#3448
+2018-09-30 16:41:39 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-09-30 16:41:39 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 16:41:39 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-5zxn)
+2018-09-30 16:41:39 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-5zxn, discord-sessions-prd-1-3)
+2018-09-30 17:42:39 | [WARNING] | Uncached Member (420611830499770399) on VOICE_STATE_UPDATE
+2018-09-30 18:11:10 | [INFO]    | Shard 0 : Disconnected
+2018-09-30 18:11:10 | [INFO]    | Shard 0 : Reconnecting after 1007 ms...
+2018-09-30 18:11:11 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-09-30 18:11:11 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-zbjb)
+2018-09-30 18:11:11 | [INFO]    | Shard 0 : Session invalidated, re-identifying...
+2018-09-30 18:11:16 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-zbjb, discord-sessions-prd-1-29)
+2018-10-01 16:29:50 | [INFO]    | Discordia 2.4.1
+2018-10-01 16:29:50 | [INFO]    | Connecting to Discord...
+2018-10-01 16:29:50 | [INFO]    | Authenticated as Panda Bot#3448
+2018-10-01 16:29:51 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-10-01 16:29:51 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-10-01 16:29:51 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-qp8p)
+2018-10-01 16:29:51 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-qp8p, discord-sessions-prd-1-22)
+2018-10-01 17:08:46 | [WARNING] | Uncached Member (285388420430430210) on VOICE_STATE_UPDATE
+2018-10-01 17:41:40 | [WARNING] | Uncached Member (124477721437929472) on VOICE_STATE_UPDATE
+2018-10-09 18:00:56 | [INFO]    | Discordia 2.4.1
+2018-10-09 18:00:56 | [INFO]    | Connecting to Discord...
+2018-10-09 18:00:57 | [INFO]    | Authenticated as Panda Bot#3448
+2018-10-09 18:00:57 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-10-09 18:00:57 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-10-09 18:00:57 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-cdjj)
+2018-10-09 18:00:58 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-cdjj, discord-sessions-prd-1-2)
+2018-10-09 20:20:51 | [INFO]    | Discordia 2.4.1
+2018-10-09 20:20:51 | [INFO]    | Connecting to Discord...
+2018-10-09 20:20:52 | [INFO]    | Authenticated as Panda Bot#3448
+2018-10-09 20:20:52 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-10-09 20:20:52 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-10-09 20:20:52 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-2l94)
+2018-10-09 20:20:52 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-2l94, discord-sessions-prd-1-4)
+2018-10-09 20:28:22 | [INFO]    | Discordia 2.4.1
+2018-10-09 20:28:22 | [INFO]    | Connecting to Discord...
+2018-10-09 20:28:22 | [INFO]    | Authenticated as Panda Bot#3448
+2018-10-09 20:28:22 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-10-09 20:28:22 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-10-09 20:28:22 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-tsrg)
+2018-10-09 20:28:22 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-tsrg, discord-sessions-prd-1-21)
+2018-11-03 20:31:47 | [INFO]    | Discordia 2.4.1
+2018-11-03 20:31:47 | [INFO]    | Connecting to Discord...
+2018-11-03 20:31:47 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-03 20:31:48 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-03 20:31:48 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-03 20:31:48 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-ssj6)
+2018-11-03 20:31:48 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-ssj6, discord-sessions-prd-1-21)
