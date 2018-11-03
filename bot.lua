@@ -388,7 +388,7 @@ client:on("messageCreate", function(message)
             if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
             ]]--
 
-            u:addRole("484008135737081856")
+            u:addRole("508359949655605289")
             u:mute()
             message.channel:send(u.mentionString.." został zmutowany".." przez "..author.tag)
         end
