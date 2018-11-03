@@ -76,7 +76,7 @@ client:on("messageCreate", function(message)
 				fields = { 
 					{
 						name = ".grupa",
-						value = "Wysyła link do paczki serwera CityRP",
+						value = "Wysyła link do naszej grupy steam",
 						inline = false
 					},
 					{
@@ -91,12 +91,12 @@ client:on("messageCreate", function(message)
                     },
                     {
                         name = ".forum",
-                        value = "Wysyła link do strony z apelacjami",
+                        value = "Wysyła link do naszego forum",
                         inline = false
                     },
                     {
                         name = ".ip", 
-                        value = "Wysyła IP serwera oraz link do dołączenia",
+                        value = "Wysyła IP serwera FalloutRP",
                         inline = false
                     },
                     {

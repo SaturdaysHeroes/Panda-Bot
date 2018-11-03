@@ -862,3 +862,10 @@
 2018-11-03 20:31:48 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2018-11-03 20:31:48 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-ssj6)
 2018-11-03 20:31:48 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-ssj6, discord-sessions-prd-1-21)
+2018-11-03 20:37:53 | [INFO]    | Discordia 2.4.1
+2018-11-03 20:37:53 | [INFO]    | Connecting to Discord...
+2018-11-03 20:37:53 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-03 20:37:53 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-03 20:37:53 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-03 20:37:54 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-37jv)
+2018-11-03 20:37:54 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-37jv, discord-sessions-prd-1-13)
