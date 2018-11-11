@@ -162,21 +162,21 @@ client:on("messageCreate", function(message)
 
 	if args[1] == prefix.."grupa" then 
         message:reply {
-            content = "Chcesz otrzymywać powiadomienia? Zapraszamy na grupę steam: x",
+            content = "Chcesz otrzymywać powiadomienia? Zapraszamy na grupę steam: https://steamcommunity.com/groups/firestonefoundation",
             mention = author,
         }
     end
     
     if args[1] == prefix.."sklep" then 
         message:reply {
-            content = "Jeżeli chcesz wsprzeć projekt to serdecznie zapraszamy do naszego sklepu: x",
+            content = "Jeżeli chcesz wsprzeć projekt to serdecznie zapraszamy do naszego sklepu: https://sklep.firestone-foundation.pl",
             mention = author,
         }
     end
 
     if args[1] == prefix.."forum" then 
         message:reply {
-            content = "Chcesz złożyć podanię do administracji, może napisac apepację? Zapraszamy na forum: x",
+            content = "Chcesz złożyć podanię do administracji, może napisac apepację? Zapraszamy na forum: https://forum.firestone-foundation.pl",
             mention = author,
         }
     end
@@ -226,7 +226,7 @@ client:on("messageCreate", function(message)
 
     if args[1] == prefix.."discord" then 
         message:reply { 
-            content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/BmW7vZh",
+            content = "Oto zaproszenie do naszego discorda, podaj koledze! https://discord.gg/XUzFekk",
             mention = author,
         }
     end
