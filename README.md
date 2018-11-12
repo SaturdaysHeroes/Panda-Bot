@@ -1,5 +1,5 @@
 # PandaBot
-A rather simple, yet multi-purpose bot coded for the rage-gangs community. 
+A rather simple, yet multi-purpose bot coded for the Firestone Foundation Project. 
 
 I've coded very basic bots using discord.js before, even tried discord.io but I've decided to give discordia a try since Lua is indeed my main language, I must say it works quite nice. 
 
