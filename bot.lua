@@ -32,6 +32,15 @@ local function stripHTML(html)
   return html
 end
 
+--[[ Tables ]]--
+
+local blacklisted = {
+    "295312275638714369",
+    "272043075239542785",
+    "274575455003082752",
+    "302716369055514625"
+}
+
 --[[ Events ]]--
 
 client:on('ready', function()
@@ -44,6 +53,12 @@ end)
 
 client:on("memberJoin", function(member)
     member:send("Witaj na discordzie projektu Firestone Foundation, aby uzyskać listę moich komend napisz na dowolnym kanale `.help`. \n \nProjekt jest cały czas rozwijany dlatego cenimy każdą propozycję i opinię naszych graczy, jeżeli chcesz dołożyć swoją cegiełkę do projektu to możesz śmiało zadawać pytania czy dawać swoje pomysły. Jeżeli interesują cię informację dotyczące prac nad projektem, zajrzyj w kategorię `Development`. Regulamin oraz ogłoszenia znajdziesz pod kategorią `Informacje`. \n\n**Życzymy miłej zabawy!**")
+end)
+
+client:on("memberJoin", function(member)
+    if blacklisted[member.id] == true then 
+        member:ban("Użytkownik znajduje się na czarnej liście.")
+    end
 end)
 
 client:on("messageCreate", function(message)
@@ -279,15 +294,6 @@ client:on("messageCreate", function(message)
             local u = message.guild:getMember(v)
             if not u then return end
 
-            --[[
-            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
-            ]]--
-
             u:kick("Kick nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zkickowany".." przez "..author.tag)
         end
@@ -314,15 +320,6 @@ client:on("messageCreate", function(message)
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
-
-            --[[
-            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
-            ]]--
 
             u:ban("Ban nadany przez PandaBot")
             message.channel:send(u.mentionString.." został zbanowany".." przez "..author.tag)
@@ -378,15 +375,6 @@ client:on("messageCreate", function(message)
         for k, v in pairs(message.mentionedUsers) do 
             local u = message.guild:getMember(v)
             if not u then return end
-        
-            --[[
-            if u:hasRole("439738495515361300") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("439738097379311626") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420596036914905090") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("479771962583941120") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("420595329033830412") then message:reply("ERROR: Użytkownik jest członkiem administracji") return end
-            if u:hasRole("422374774610722816") then message:reply("ERROR: Użytkownik jest botem") return end
-            ]]--
 
             u:addRole("508359949655605289")
             u:mute()
