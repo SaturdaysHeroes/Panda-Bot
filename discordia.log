@@ -869,3 +869,39 @@
 2018-11-03 20:37:53 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
 2018-11-03 20:37:54 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-37jv)
 2018-11-03 20:37:54 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-37jv, discord-sessions-prd-1-13)
+2018-11-12 20:57:26 | [INFO]    | Discordia 2.4.1
+2018-11-12 20:57:27 | [INFO]    | Connecting to Discord...
+2018-11-12 20:57:27 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-12 20:57:27 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-12 20:57:28 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-12 20:57:28 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-r2bc)
+2018-11-12 20:57:28 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-r2bc, discord-sessions-prd-1-8)
+2018-11-12 20:57:42 | [INFO]    | Discordia 2.4.1
+2018-11-12 20:57:42 | [INFO]    | Connecting to Discord...
+2018-11-12 20:57:42 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-12 20:57:42 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-12 20:57:43 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-12 20:57:43 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-4fwp)
+2018-11-12 20:57:43 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-4fwp, discord-sessions-prd-1-12)
+2018-11-12 20:58:39 | [INFO]    | Discordia 2.4.1
+2018-11-12 20:58:39 | [INFO]    | Connecting to Discord...
+2018-11-12 20:58:40 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-12 20:58:40 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-12 20:58:40 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-12 20:58:40 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-qp8p)
+2018-11-12 20:58:40 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-qp8p, discord-sessions-prd-1-10)
+2018-11-12 20:59:31 | [INFO]    | Discordia 2.4.1
+2018-11-12 20:59:31 | [INFO]    | Connecting to Discord...
+2018-11-12 20:59:31 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-12 20:59:31 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-12 20:59:31 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-12 20:59:31 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-ssj6)
+2018-11-12 20:59:32 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-ssj6, discord-sessions-prd-1-20)
+2018-11-12 21:03:15 | [INFO]    | Discordia 2.4.1
+2018-11-12 21:03:15 | [INFO]    | Connecting to Discord...
+2018-11-12 21:03:15 | [INFO]    | Authenticated as Panda Bot#3448
+2018-11-12 21:03:15 | [INFO]    | Launching shard 0 (1 out of 1)...
+2018-11-12 21:03:16 | [INFO]    | Shard 0 : Connected to wss://gateway.discord.gg
+2018-11-12 21:03:16 | [INFO]    | Shard 0 : Received HELLO (gateway-prd-main-4b1d)
+2018-11-12 21:03:17 | [INFO]    | Shard 0 : Received READY (gateway-prd-main-4b1d, discord-sessions-prd-1-15)
+2018-11-12 21:03:45 | [ERROR]   | 403 - FORBIDDEN : POST https://discordapp.com/api/v7/channels/508774347293589514/messages

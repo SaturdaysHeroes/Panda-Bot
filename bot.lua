@@ -35,16 +35,17 @@ end
 --[[ Tables ]]--
 
 local blacklisted = {
-    "295312275638714369",
-    "272043075239542785",
-    "274575455003082752",
-    "302716369055514625"
+    ["295312275638714369"] = true,
+    ["272043075239542785"] = true, 
+    ["274575455003082752"] = true, 
+    ["302716369055514625"] = true
 }
 
 --[[ Events ]]--
 
 client:on('ready', function()
 	print('Logged in as '.. client.user.username)
+	client._masterGuild = client:getGuild("474601783948214272")
 end)
 
 client:on("ready", function()
@@ -56,7 +57,7 @@ client:on("memberJoin", function(member)
 end)
 
 client:on("memberJoin", function(member)
-    if blacklisted[member.id] == true then 
+    if blacklisted[member.id] then 
         member:ban("Użytkownik znajduje się na czarnej liście.")
     end
 end)
