@@ -253,7 +253,7 @@ client:on("messageCreate", function(message)
             local headers = {
                 {"accept", "application/json"}
             }
-            local url = "http://api.saturdaysheroes.me/gmod/playercount/falloutrp.php"
+            local url = "http://api.saturdaysheroes.xyz/gmod/playercount/falloutrp.php"
 
             local res, body = http.request("GET", url, headers)
             
