@@ -1,7 +1,7 @@
 local discordia = require('discordia')
 local httpCodec = require('http-codec')
 local client = discordia.Client()
-local botToken = "NDg2NTk1Nzc4NzU3MDAxMjQ4.DnBa9Q._1xUewq0hth0D-EBoblfDQnJCGc"
+local botToken = ""
 local http = require("coro-http")
 local json = require("json")
 
