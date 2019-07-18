@@ -1,11 +1,7 @@
 # PandaBot
 A rather simple, yet multi-purpose bot coded for the Firestone Foundation Project. 
 
-I've coded very basic bots using discord.js before, even tried discord.io but I've decided to give discordia a try since Lua is indeed my main language, I must say it works quite nice. 
-
-The code could be a bit messy, first time working with the library and the discord API in general, you can use it for your own community if you want, as long as I'm credited of course. In order for this to work you need to setup discordia, take a look at: https://github.com/SinisterRectus/Discordia.
+This bot was my first attempt at making a Discord bot in Lua, it uses the Discordia package for Luvit and has very basic commands. As far as code goes the bot is OK, probably not the best source of knowledge though. You can use this for your community if you want, it's fine by me.
 
 Special thanks to Owain Owjo (76561198058562944) for helping me with a lot of the commands.
-
-Side note: All code and commits are in Polish, you should be able to make sense of it however. 
 
